@@ -1,0 +1,57 @@
+@import '@fontsource-variable/manrope';
+@import '@fontsource-variable/plus-jakarta-sans';
+
+:root {
+  /* Warm olive, bark & cream with an ochre accent (sunlit-interior palette) */
+  --white: #ffffff;
+  --cream: #f6efe2;
+  --paper: #fbf7ef;
+  --sand: #ece1cb;
+  --sand-2: #e0d1b3;
+  --khaki: #b9a77e;
+  --olive: #5b5236;
+  --olive-2: #6f6543;
+  --olive-deep: #3a3423;
+  --bark: #231d14;
+  --ink: #2a2419;
+  --muted: #6b614c;
+  --line: #e3d6bd;
+  --ochre: #d6a93c;
+  --ochre-soft: #f3dfa6;
+  --ochre-deep: #85600f;
+
+  --display: 'Manrope Variable', 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --sans: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --serif: var(--display);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --hd-h: 72px;
+  --gutter: clamp(20px, 4vw, 44px);
+  --r-xl: 32px;
+  --r-lg: 22px;
+  --r-md: 14px;
+  --shadow: 0 1px 2px rgba(35, 29, 20, .05), 0 26px 50px -30px rgba(35, 29, 20, .45);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--hd-h) + 16px); -webkit-text-size-adjust: 100%; }
+html, body { width: 100%; overflow-x: clip; }
+html.menu-locked { overflow: hidden; }
+body { font-family: var(--sans); font-size: 1.0625rem; line-height: 1.68; color: var(--ink); background: var(--cream); -webkit-font-smoothing: antialiased; }
+h1, h2 { font-family: var(--display); font-weight: 500; line-height: 1.06; letter-spacing: -0.035em; }
+h3, h4 { font-family: var(--display); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+address { font-style: normal; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--ochre-deep); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--ochre-soft); color: var(--bark); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
