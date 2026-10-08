@@ -55,7 +55,7 @@ export function Intro() {
             <p>
               It is flexible workspace Al Reem Island companies grow in, and coworking offices Al Reem Island teams can
               upgrade into without changing buildings — the coworking space Addax Tower is known for, run by{' '}
-              <a href={`${MAIN_SITE}/`}>Aegis Coworking</a>. Need desk space Al Reem Island style for one day? A day pass
+              Aegis Coworking. Need desk space Al Reem Island style for one day? A day pass
               is AED 100.
             </p>
             <nav className="toc" aria-label="On this page">
@@ -156,8 +156,7 @@ export function Pricing() {
           ))}
         </ul>
         <p className="fine center">
-          Want to rent desk space in ADGM for one day? A day pass is the cheapest way in. Current offers on{' '}
-          <a href={`${MAIN_SITE}/pricing`}>aegiscoworking.ae/pricing</a>.
+          Want to rent desk space in ADGM for one day? A day pass is the cheapest way in. Ask us on WhatsApp for current offers.
         </p>
       </div>
     </section>
