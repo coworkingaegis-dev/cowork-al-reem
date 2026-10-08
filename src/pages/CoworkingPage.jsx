@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import { Intro, Spaces, Pricing, Amenities, Gallery } from '../components/Sections'
-import { Reviews, NearADGM, Guides, FAQ, FinalCTA, WhatsAppFab } from '../components/More'
+import { Reviews, NearADGM, FAQ, FinalCTA, WhatsAppFab } from '../components/More'
 import {
   SITE_URL, MAIN_SITE, PAGE_TITLE, PAGE_DESCRIPTION, DATE_PUBLISHED, DATE_MODIFIED,
   BUSINESS, faqs, guides, keywords,
@@ -87,10 +87,6 @@ const schemaGraph = {
       '@type': 'FAQPage', '@id': `${SITE_URL}/#faq`,
       mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
     },
-    {
-      '@type': 'ItemList', '@id': `${SITE_URL}/#guides`, name: 'Coworking space guides',
-      itemListElement: guides.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: g.url })),
-    },
   ],
 }
 
@@ -135,7 +131,6 @@ function CoworkingPage() {
         <Gallery />
         <Reviews />
         <NearADGM />
-        <Guides />
         <FAQ />
         <FinalCTA />
       </main>
