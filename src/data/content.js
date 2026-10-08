@@ -17,9 +17,9 @@ import execImg from '../assets/coworking-space-al-reem-island-executive-office.w
 
 export const SITE_URL = 'https://coworkingspacealreemisland.online'
 export const MAIN_SITE = 'https://www.aegiscoworking.ae'
-export const PAGE_TITLE = 'Coworking Space Al Reem Island | Desks from AED 1,000 | Aegis'
+export const PAGE_TITLE = 'Coworking Space Al Reem Island for Residents & Local Teams'
 export const PAGE_DESCRIPTION =
-  'Coworking space on Al Reem Island inside ADGM at Addax Tower: hot desk AED 1,000, dedicated desk AED 1,150, day pass AED 100, private offices from AED 4,500.'
+  'Coworking space Al Reem Island for people who live and work on the island: hot desks, dedicated desks, day passes and private offices at Addax Tower, inside ADGM.'
 export const DATE_PUBLISHED = '2026-10-07'
 export const DATE_MODIFIED = '2026-10-07'
 
@@ -42,6 +42,9 @@ export const BUSINESS = {
     'https://www.facebook.com/aegis.coworking',
   ],
 }
+
+// Card links open WhatsApp instead of other websites
+export const WA_INFO = `${BUSINESS.whatsapp}?text=${encodeURIComponent('Hi Aegis, I would like more details about your workspace.')}`
 
 export const images = { privateImg, privateSmall, receptionImg, boardroomImg, deskImg, coworkImg, meetingImg, smallImg, servicedImg, execImg }
 
@@ -75,20 +78,20 @@ export const heroStats = [
 
 // Hover-reveal list of spaces
 export const spaces = [
-  { id: 'hot', name: 'Hot desk', price: 'AED 1,000 / month', img: 'coworkImg', text: 'Any open seat on the shared floor — the flexi desk in ADGM freelancers love.', link: `${MAIN_SITE}/office-space` },
-  { id: 'dedicated', name: 'Dedicated desk', price: 'AED 1,150 / month', img: 'deskImg', text: 'Your own desk, 24/7 access, a locker and an ADGM licence address.', link: 'https://dedicateddeskadgm.online/' },
-  { id: 'private', name: 'Private office', price: 'From AED 4,500 / month', img: 'privateImg', text: 'A lockable, furnished private coworking space Al Reem Island teams make their own.', link: `${MAIN_SITE}/private-office` },
-  { id: 'meeting', name: 'Meeting room', price: 'Hourly booking', img: 'meetingImg', text: 'Client meetings and calls — members get monthly meeting room credits.', link: `${MAIN_SITE}/meeting-room` },
-  { id: 'day', name: 'Day pass', price: 'AED 100 / day', img: 'boardroomImg', w: 1024, h: 683, text: 'Cheap desk space in ADGM for a day — no lease, no commitment.', link: `${MAIN_SITE}/day-pass` },
-  { id: 'virtual', name: 'Virtual office', price: 'From AED 292 / month', img: 'receptionImg', text: 'A registered ADGM business address with mail handling.', link: 'https://servicedofficeadgm.online/' },
+  { id: 'hot', name: 'Hot desk', price: 'AED 1,000 / month', img: 'coworkImg', text: 'Any open seat on the shared floor — the flexi desk in ADGM freelancers love.', link: WA_INFO },
+  { id: 'dedicated', name: 'Dedicated desk', price: 'AED 1,150 / month', img: 'deskImg', text: 'Your own desk, 24/7 access, a locker and an ADGM licence address.', link: WA_INFO },
+  { id: 'private', name: 'Private office', price: 'From AED 4,500 / month', img: 'privateImg', text: 'A lockable, furnished private coworking space Al Reem Island teams make their own.', link: WA_INFO },
+  { id: 'meeting', name: 'Meeting room', price: 'Hourly booking', img: 'meetingImg', text: 'Client meetings and calls — members get monthly meeting room credits.', link: WA_INFO },
+  { id: 'day', name: 'Day pass', price: 'AED 100 / day', img: 'boardroomImg', w: 1024, h: 683, text: 'Cheap desk space in ADGM for a day — no lease, no commitment.', link: WA_INFO },
+  { id: 'virtual', name: 'Virtual office', price: 'From AED 292 / month', img: 'receptionImg', text: 'A registered ADGM business address with mail handling.', link: WA_INFO },
 ]
 
 // Pricing (features as published on aegiscoworking.ae/pricing)
 export const plans = [
-  { id: 'day', name: 'Day pass', amount: 100, unit: '/ day', perks: ['Full access to the shared coworking floor', 'High-speed WiFi', 'Premium coffee & tea', 'Print & scan access', 'No lease, no commitment'], link: `${MAIN_SITE}/day-pass` },
-  { id: 'hot', name: 'Hot desk', amount: 1000, unit: '/ month', perks: ['Full access to the shared coworking floor', 'Fast, reliable fibre-optic internet', 'Meeting room credits', 'Invitations to community events', 'Complimentary coffee and tea'], link: `${MAIN_SITE}/office-space` },
-  { id: 'dedicated', name: 'Dedicated desk', amount: 1150, unit: '/ month', featured: true, perks: ['Office address suitable for an ADGM licence', '24/7 access', 'Dedicated lockers for storage', 'Extra meeting room credits every month', 'Everything in the hot desk plan'], note: '+ one-time AED 1,200 due diligence', link: 'https://dedicateddeskadgm.online/' },
-  { id: 'private', name: 'Private office', amount: 4500, from: true, unit: '/ month', perks: ['Office address suitable for an ADGM licence', 'Fully furnished, ready-to-use office', 'Configurable layout to suit your team', 'All dedicated desk benefits'], link: `${MAIN_SITE}/private-office` },
+  { id: 'day', name: 'Day pass', amount: 100, unit: '/ day', perks: ['Full access to the shared coworking floor', 'High-speed WiFi', 'Premium coffee & tea', 'Print & scan access', 'No lease, no commitment'], link: WA_INFO },
+  { id: 'hot', name: 'Hot desk', amount: 1000, unit: '/ month', perks: ['Full access to the shared coworking floor', 'Fast, reliable fibre-optic internet', 'Meeting room credits', 'Invitations to community events', 'Complimentary coffee and tea'], link: WA_INFO },
+  { id: 'dedicated', name: 'Dedicated desk', amount: 1150, unit: '/ month', featured: true, perks: ['Office address suitable for an ADGM licence', '24/7 access', 'Dedicated lockers for storage', 'Extra meeting room credits every month', 'Everything in the hot desk plan'], note: '+ one-time AED 1,200 due diligence', link: WA_INFO },
+  { id: 'private', name: 'Private office', amount: 4500, from: true, unit: '/ month', perks: ['Office address suitable for an ADGM licence', 'Fully furnished, ready-to-use office', 'Configurable layout to suit your team', 'All dedicated desk benefits'], link: WA_INFO },
 ]
 
 export const amenities = [
@@ -113,14 +116,10 @@ export const gallery = [
   { img: 'boardroomImg', w: 1024, h: 683, alt: 'Boardroom at Aegis coworking office Al Reem Island', cap: 'Boardroom' },
 ]
 
+// Two genuine member reviews, word for word — a different pair on each site
 export const testimonials = [
-  { quote: 'Aegis coworking provide super professional services especially with the pricing, and the customer service, i needed the license and a space for one of my team member and they did all within a week time, my team member loved the space. I will highly suggest if any on is looking to get a license and a space in ADGM go for Aegis coworking.', name: 'Ubaid Zia', role: 'Startup Founder' },
-  { quote: 'Very happy with the service from Aegis Coworking. We needed a professional business address in Abu Dhabi without committing to a large traditional office, and Aegis provided a practical solution. The team is responsive and professional.', name: 'Uzair Tahir', role: 'Tech Startup Founder' },
-  { quote: 'I was specifically looking for the cheapest coworking space in ADGM and wanted a privacy environment rather than just a desk. Aegis offered a good balance of price, location, and facilities.', name: 'Naveeda Haseeb', role: 'Startup Founder' },
-  { quote: 'We were comparing affordable coworking space in ADGM and found Aegis to be a very practical choice. The workspace feels professional while keeping costs affordable.', name: 'John Paints', role: 'Software Analyst' },
-  { quote: 'For businesses looking for a low cost office in ADGM, Aegis provides flexible office space and a professional seating. The team made the setup process very easy.', name: 'Haseeb Awan', role: 'Entrepreneur' },
-  { quote: 'Aegis Coworking is a convenient workspace in Abu Dhabi for startups and growing companies. The flexible workspace options, meeting room and hot desk helped us avoid the commitment of a traditional office.', name: 'Kasim Malikkandy', role: 'Consultant' },
   { quote: 'Nice suitable area for coworking for Adam incorporation.', name: 'Ali Kutty Faizy', role: 'Entrepreneur' },
+  { quote: 'Very happy with the service from Aegis Coworking. We needed a professional business address in Abu Dhabi without committing to a large traditional office, and Aegis provided a practical solution. The team is responsive and professional.', name: 'Uzair Tahir', role: 'Tech Startup Founder' },
 ]
 
 export const guides = [
@@ -138,17 +137,15 @@ export const faqs = [
   {
     q: 'How much does a coworking space on Al Reem Island cost?',
     a: 'At Aegis Coworking in Addax Tower, a hot desk is AED 1,000 per month, a dedicated desk AED 1,150 per month (plus a one-time AED 1,200 due-diligence fee), a day pass AED 100 and private offices start from AED 4,500 per month. ADGM government fees are separate.',
-    link: { text: 'ADGM coworking cost in 2026', url: `${MAIN_SITE}/blog/adgm-coworking-space-cost-2026` },
+    link: { text: 'ADGM coworking cost in 2026', url: 'https://www.aegiscoworking.ae/blog/adgm-coworking-space-cost-2026' },
   },
   {
     q: 'Is the coworking space on Al Reem Island inside ADGM?',
     a: 'Yes. Addax Tower on Al Reem Island is within the Abu Dhabi Global Market (ADGM) jurisdiction, so Aegis is a coworking space inside ADGM, not just near it.',
-    link: { text: 'Is Al Reem Island part of ADGM?', url: `${MAIN_SITE}/blog/is-al-reem-island-part-of-adgm` },
   },
   {
     q: 'What is the difference between a hot desk and a dedicated desk?',
     a: 'A hot desk (flexi desk) lets you use any open seat on the shared coworking floor. A dedicated desk is your own permanent desk with 24/7 access, a locker, extra meeting room credits and an office address suitable for an ADGM licence.',
-    link: { text: 'Is a flexi desk enough for a solo business?', url: `${MAIN_SITE}/blog/adgm-flexi-desk-enough-solo-business` },
   },
   {
     q: 'Can I use the coworking space for my ADGM licence?',
@@ -157,7 +154,7 @@ export const faqs = [
   {
     q: 'What is the cheapest desk space in ADGM?',
     a: 'A day pass at AED 100 is the cheapest way in. For monthly use, the hot desk is AED 1,000 and the dedicated desk at AED 1,150 is the lowest-cost desk that includes an ADGM licence address.',
-    link: { text: 'Low-cost office options in ADGM', url: `${MAIN_SITE}/blog/low-cost-office-adgm-budget-friendly-workspace-solutions-in-abu-dhabi` },
+    link: { text: 'Affordable coworking on Al Reem Island', url: 'https://www.aegiscoworking.ae/blog/affordable-coworking-al-reem-island-adgm' },
   },
   {
     q: 'Do members get 24/7 access?',
@@ -170,10 +167,17 @@ export const faqs = [
   {
     q: 'Can I book a private coworking space for my team?',
     a: 'Yes. Private offices start from AED 4,500 per month for small teams, with medium and large offices priced by layout — all on the same floor as the shared coworking space.',
-    link: { text: 'Private office vs coworking in ADGM', url: `${MAIN_SITE}/blog/private-office-vs-coworking-adgm-the-complete-cost-privacy-guide` },
   },
   {
     q: 'How do I book a tour of the coworking space?',
     a: 'Message us on WhatsApp or call +971 50 392 6316. Tours run Monday to Friday, 9 AM–6 PM, and we can send a video walkthrough if you are abroad.',
+  },
+  {
+    q: 'Is the coworking space convenient for Al Reem Island residents?',
+    a: 'Yes. Addax Tower is on Al Reem Island, so residents can work on the island instead of commuting. A day pass at AED 100 is an easy way to try it.',
+  },
+  {
+    q: 'Can I bring a client to the coworking space?',
+    a: 'Yes. Meeting rooms can be booked by the hour for client meetings, and members get monthly meeting room credits.',
   },
 ]
