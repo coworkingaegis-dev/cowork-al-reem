@@ -27,7 +27,7 @@ function Counter({ n, prefix = '', delay = 0 }) {
 }
 
 const titleWords = ['Coworking', 'on', 'Al', 'Reem', 'Island,']
-const accentWords = ['elevated', 'to', 'Level', '38']
+const accentWords = ['close', 'to', 'home,', 'on', 'Level', '38']
 
 export default function Hero() {
   const frameRef = useRef(null)
@@ -58,8 +58,8 @@ export default function Hero() {
               </span>
             </h1>
             <p className="hero-lead rise" style={{ '--d': 8 }}>
-              A sunlit coworking space in Addax Tower, inside ADGM — hot desks from AED 1,000, dedicated desks at AED 1,150,
-              private offices and a day pass for AED 100.
+              Live on Al Reem Island? Work on the island from a coworking space in Addax Tower, inside ADGM — hot desks
+              from AED 1,000, dedicated desks at AED 1,150, private offices and a day pass for AED 100.
             </p>
             <div className="hero-ctas rise" style={{ '--d': 9 }}>
               <a className="btn btn-ochre" href={`${BUSINESS.whatsapp}?text=${encodeURIComponent('Hi Aegis, I would like to book a tour of the coworking space on Al Reem Island.')}`} target="_blank" rel="noopener noreferrer">Book a tour <Icon name="arrow" size={16} /></a>
