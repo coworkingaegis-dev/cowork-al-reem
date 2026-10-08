@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Reveal } from './Motion'
 import Icon from './Icon'
-import { testimonials, guides, faqs, images, BUSINESS, MAIN_SITE } from '../data/content'
+import { testimonials, faqs, images, BUSINESS } from '../data/content'
 import { PhoneLink } from './Navbar'
 
 const initials = (n) => n.split(' ').map((p) => p[0]).slice(0, 2).join('')
@@ -23,7 +23,7 @@ export function Reviews() {
         <div className="rv-head">
           <p className="kicker">Reviews</p>
           <h2 id="rev-title">Looking for the best coworking space Al Reem Island offers? Hear it from members</h2>
-          <p>Seven reviews, exactly as published on <a href={`${MAIN_SITE}/`}>aegiscoworking.ae</a>.</p>
+          <p>Two of our member reviews, word for word — <a href={BUSINESS.mapsUrl} target="_blank" rel="noopener noreferrer">read more on Google</a>.</p>
         </div>
         <div className="rv-stage" aria-live="polite">
           <span className="rv-mark" aria-hidden="true">“</span>
@@ -82,7 +82,6 @@ export function NearADGM() {
           </dl>
           <div className="near-ctas">
             <a className="btn btn-olive" href={BUSINESS.mapsUrl} target="_blank" rel="noopener noreferrer">Get directions</a>
-            <a className="link-u" href={`${MAIN_SITE}/blog/is-al-reem-island-part-of-adgm`}>Is Al Reem Island part of ADGM?</a>
           </div>
         </Reveal>
       </div>
@@ -90,50 +89,6 @@ export function NearADGM() {
   )
 }
 
-// Drag/scroll-snap carousel of guides with progress bar
-export function Guides() {
-  const trackRef = useRef(null)
-  const [prog, setProg] = useState(0)
-  const onScroll = () => {
-    const el = trackRef.current
-    if (!el) return
-    const max = el.scrollWidth - el.clientWidth
-    setProg(max > 0 ? el.scrollLeft / max : 0)
-  }
-  const nudge = (dir) => {
-    const el = trackRef.current
-    if (el) el.scrollBy({ left: dir * Math.min(el.clientWidth * 0.8, 420), behavior: 'smooth' })
-  }
-  return (
-    <section className="guides sec" id="guides" aria-labelledby="guides-title">
-      <div className="wrap">
-        <div className="g-head">
-          <div>
-            <p className="kicker">From the Aegis blog</p>
-            <h2 id="guides-title">Guides for choosing a coworking space</h2>
-          </div>
-          <div className="g-nav">
-            <button type="button" onClick={() => nudge(-1)} aria-label="Previous guides"><Icon name="arrow" size={18} /></button>
-            <button type="button" onClick={() => nudge(1)} aria-label="Next guides"><Icon name="arrow" size={18} /></button>
-          </div>
-        </div>
-      </div>
-      <ul className="g-track" ref={trackRef} onScroll={onScroll}>
-        {guides.map((g, i) => (
-          <li key={g.slug}>
-            <a href={g.url} className="g-card">
-              <span className="g-top"><span className="g-tag">{g.tag}</span><span className="g-n">{String(i + 1).padStart(2, '0')}</span></span>
-              <span className="g-title">{g.title}</span>
-              <span className="g-read">Read the guide <Icon name="arrow" size={15} /></span>
-            </a>
-          </li>
-        ))}
-        <li className="g-all"><a href={`${MAIN_SITE}/blogs`} className="g-card g-card-all"><span className="g-title">All articles</span><span className="g-read">aegiscoworking.ae/blogs <Icon name="arrow" size={15} /></span></a></li>
-      </ul>
-      <div className="wrap"><div className="g-bar" aria-hidden="true"><span style={{ '--g': prog }} /></div></div>
-    </section>
-  )
-}
 
 // Accordion with smooth height (answers stay in the HTML for crawlers)
 export function FAQ() {
